@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背包UI设计 - 背包面板</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #1a1a2e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+        }
+        
+        /* 背包主面板 */
+        .backpack-panel {
+            width: 380px;
+            height: 260px;
+            background: linear-gradient(180deg, #0a1f2e 0%, #061520 100%);
+            border: 1px solid #1a3a4a;
+            border-radius: 4px;
+            box-shadow: 
+                0 0 0 1px #0d2b3a,
+                0 4px 20px rgba(0, 0, 0, 0.6),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        /* 标题栏 */
+        .panel-header {
+            height: 32px;
+            background: linear-gradient(180deg, #0d2b3a 0%, #081e2b 100%);
+            border-bottom: 1px solid #0f3a4d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .panel-header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+            right: 10px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, #1a4a5e 50%, transparent 100%);
+        }
+        
+        .panel-title {
+            color: #7ab8c9;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* 内容区域 */
+        .panel-content {
+            flex: 1;
+            padding: 12px 16px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* 网格容器 */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 64px);
+            grid-template-rows: repeat(3, 64px);
+            gap: 8px;
+            justify-content: center;
+            align-content: center;
+            flex: 1;
+        }
+        
+        /* 格子 */
+        .grid-cell {
+            width: 64px;
+            height: 64px;
+            background: rgba(10, 30, 45, 0.6);
+            border: 1px solid #1a3a4d;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+        
+        .grid-cell::before {
+            content: "";
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            bottom: 1px;
+            border-radius: 2px;
+            background: linear-gradient(135deg, rgba(20, 50, 70, 0.3) 0%, rgba(5, 20, 30, 0.1) 100%);
+            pointer-events: none;
+        }
+        
+        /* 物品图标 */
+        .item-icon {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* 闲置状态 - 通透无特效 */
+        .item-idle {
+            opacity: 1;
+            filter: none;
+        }
+        
+        /* 空格子 */
+        .grid-cell.empty {
+            background: rgba(8, 25, 38, 0.4);
+            border-color: #142a38;
+        }
+        
+        .grid-cell.empty::before {
+            background: none;
+        }
+        
+        /* 底部信息栏 */
+        .panel-footer {
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 12px;
+            color: #4a7a8a;
+            font-size: 11px;
+        }
+        
+        .item-count {
+            color: #6a9aaa;
+        }
+        
+        /* 装饰性边角 */
+        .corner-decoration {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border: 1px solid #2a5a6a;
+            opacity: 0.5;
+        }
+        
+        .corner-tl {
+            top: 4px;
+            left: 4px;
+            border-right: none;
+            border-bottom: none;
+        }
+        
+        .corner-tr {
+            top: 4px;
+            right: 4px;
+            border-left: none;
+            border-bottom: none;
+        }
+        
+        .corner-bl {
+            bottom: 4px;
+            left: 4px;
+            border-right: none;
+            border-top: none;
+        }
+        
+        .corner-br {
+            bottom: 4px;
+            right: 4px;
+            border-left: none;
+            border-top: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="backpack-panel">
+        <!-- 装饰边角 -->
+        <div class="corner-decoration corner-tl"></div>
+        <div class="corner-decoration corner-tr"></div>
+        <div class="corner-decoration corner-bl"></div>
+        <div class="corner-decoration corner-br"></div>
+        
+        <!-- 标题栏 -->
+        <div class="panel-header">
+            <span class="panel-title">背 包</span>
+        </div>
+        
+        <!-- 内容区域 -->
+        <div class="panel-content">
+            <div class="grid-container">
+                <!-- 第1行 -->
+                <div class="grid-cell">
+                    <svg class="item-icon item-idle" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <!-- 写实风格剑 -->
+                        <defs>
+                            <linearGradient id="bladeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#c0c8d0"/>
+                                <stop offset="50%" style="stop-color:#8a949e"/>
+                                <stop offset="100%" style="stop-color:#5a6570"/>
+                            </linearGradient>
+                            <linearGradient id="handleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#8b4513"/>
+                                <stop offset="100%" style="stop-color:#5c2e0e"/>
+                            </linearGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="0.5" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <!-- 剑刃 -->
+                        <path d="M32 8 L36 36 L32 40 L28 36 Z" fill="url(#bladeGrad)" stroke="#4a5560" stroke-width="0.5"/>
+                        <path d="M32 8 L34 36 L32 38 L30 36 Z" fill="#d0d8e0" opacity="0.6"/>
+                        <!-- 剑柄 -->
+                        <rect x="30" y="38" width="4" height="10" fill="url(#handleGrad)" rx="1"/>
+                        <!-- 护手 -->
+                        <rect x="26" y="36" width="12" height="3" fill="#6b7280" rx="1"/>
+                        <!-- 剑柄末端 -->
+                        <circle cx="32" cy="50" r="2.5" fill="#4a5560"/>
+                        <!-- 高光 -->
+                        <path d="M31 10 L32 35" stroke="white" stroke-width="0.5" opacity="0.4"/>
+                    </svg>
+                </div>
+                <div class="grid-cell">
+                    <svg class="item-icon item-idle" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <!-- 写实风格盾牌 -->
+                        <defs>
+                            <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#a0a8b0"/>
+                                <stop offset="50%" style="stop-color:#6a727a"/>
+                                <stop offset="100%" style="stop-color:#4a525a"/>
+                            </linearGradient>
+                            <radialGradient id="shieldCenter" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" style="stop-color:#8a949e"/>
+                                <stop offset="100%" style="stop-color:#5a6570"/>
+                            </radialGradient>
+                        </defs>
+                        <!-- 盾体外轮廓 -->
+                        <path d="M32 8 C32 8 48 12 48 28 C48 44 32 54 32 54 C32 54 16 44 16 28 C16 12 32 8 32 8 Z" 
+                              fill="url(#shieldGrad)" stroke="#3a424a" stroke-width="1"/>
+                        <!-- 内圈 -->
+                        <path d="M32 14 C32 14 42 17 42 28 C42 39 32 47 32 47 C32 47 22 39 22 28 C22 17 32 14 32 14 Z" 
+                              fill="url(#shieldCenter)" stroke="#4a525a" stroke-width="0.5"/>
+                        <!-- 中心装饰 -->
+                        <circle cx="32" cy="30" r="6" fill="#7a848e" stroke="#5a6570" stroke-width="0.5"/>
+                        <circle cx="32" cy="30" r="3" fill="#9aa4ae"/>
+                        <!-- 高光 -->
+                        <ellipse cx="28" cy="20" rx="4" ry="6" fill="white" opacity="0.15"/>
+                    </svg>
+                </div>
+                <div class="grid-cell">
+                    <svg class="item-icon item-idle" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <!-- 写实风格药水 -->
+                        <defs>
+                            <linearGradient id="bottleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#8a9aaa"/>
+                                <stop offset="30%" style="stop-color:#c0d0e0"/>
+                                <stop offset="50%" style="stop-color:#d8e4f0"/>
+                                <stop offset="70%" style="stop-color:#c0d0e0"/>
+                                <stop offset="100%" style="stop-color:#8a9aaa"/>
+                            </linearGradient>
+                            <linearGradient id="liquidGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ff6b6b"/>
+                                <stop offset="100%" style="stop-color:#c92a2a"/>
+                            </linearGradient>
+                        </defs>
+                        <!-- 瓶身 -->
+                        <path d="M26 18 L26 28 C26 28 20 32 20 42 C20 50 26 54 32 54 C38 54 44 50 44 42 C44 32 38 28 38 28 L38 18 Z" 
+                              fill="url(#bottleGrad)" stroke="#6a7a8a" stroke-width="0.5"/>
+                        <!-- 液体 -->
+                        <path d="M23 38 C23 38 25 34 32 34 C39 34 41 38 41 38 L41 42 C41 48 37 52 32 52 C27 52 23 48 23 42 Z" 
+                              fill="url(#liquidGrad)" opacity="0.85"/>
+                        <!-- 瓶口 -->
+                        <rect x="28" y="14" width="8" height="6" fill="#7a8a9a" rx="1"/>
+                        <rect x="27" y="12" width="10" height="4" fill="#5a6a7a" rx="1"/>
+                        <!-- 高光 -->
+                        <ellipse cx="28" cy="36" rx="3" ry="8" fill="white" opacity="0.3"/>
+                    </svg>
+                </div>
+                <div class="grid-cell">
+                    <svg class="item-icon item-idle" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <!-- 写实风格宝石 -->
+                        <defs>
+                            <linearGradient id="gemGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#40c0ff"/>
+                                <stop offset="50%" style="stop-color:#0088cc"/>
+                                <stop offset="100%" style="stop-color:#004488"/>
+                            </linearGradient>
+                            <radialGradient id="gemShine" cx="30%" cy="30%" r="50%">
+                                <stop offset="0%" style="stop-color:#80e0ff"/>
+                                <stop offset="100%" style="stop-color:transparent"/>
+                            </radialGradient>
+                        </defs>
+                        <!-- 宝石主体 -->
+                        <polygon points="32,10 46,22 46,38 32,50 18,38 18,22" fill="url(#gemGrad)" stroke="#003366" stroke-width="0.5"/>
+                        <!-- 切面 -->
+                        <polygon points="32,10 46,22 32,28 18,22" fill="#60d0ff" opacity="0.6"/>
+                        <polygon points="18,22 32,28 32,50 18,38" fill="#0088cc" opacity="0.8"/>
+                        <polygon points="46,22 32,28 32,50 46,38" fill="#0066aa" opacity="0.8"/>
+                        <!-- 高光 -->
+                        <polygon points="32,12 42,21 32,26 22,21" fill="url(#gemShine)" opacity="0.7"/>
+                        <circle cx="26" cy="20" r="2" fill="white" opacity="0.5"/>
+                    </svg>
+                </div>
+                
+                <!-- 第2行 -->
+                <div class="grid-cell">
+                    <svg class="item-icon item-idle" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <!-- 写实风格头盔 -->
+                        <defs>
+                            <linearGradient id="helmGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#9a9a9a"/>
+                                <stop offset="50%" style="stop-color:#6a6a6a"/>
+                                <stop offset="100%" style="stop-color:#4a4a4a"/>
+                            </linearGradient>
+                        </defs>
+                        <!-- 头盔主体 -->
+                        <path d="M20 28 C20 18 26 12 32 12 C38 12 44 18 44 28 L44 36 L20 36 Z" 
+                              fill="url(#helmGrad)" stroke="#3a3a3a" stroke-width="0.5"/>
+                        <!-- 面甲 -->
+                        <rect x="24" y="30" width="16" height="10" fill="#5a5a5a" rx="2"/>
+                        <rect x="26" y="32" width="5" height="4" fill="#2a2a2a" rx="1"/>
+                        <rect x="33" y="32" width="5" height="4" fill="#2a2a2a" rx="1"/>
+                        <!-- 顶部装饰 -->
+                        <rect x="30" y="10" width="4" height="6" fill="#7a7a7a"/>
+                        <!-- 高光 -->
+                        <ellipse cx="28" cy="20" rx="6" ry="4" fill="white" opacity="0.15"/>
+                    </svg>
+                </div>
+                <div class="grid-cell">
+                    <svg class="item-icon item-idle" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <!-- 写实风格弓箭 -->
+                        <defs>
+                            <linearGradient id="bowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#8b6914"/>
+                                <stop offset="100%" style="stop-color:#5a4510"/>
+                            </linearGradient>
+                        </defs>
+                        <!-- 弓身 -->
+                        <path d="M18 48 Q16 32 32 16 Q48 32 46 48" 
+                              fill="none" stroke="url(#bowGrad)" stroke-width="3" stroke-linecap="round"/>
+                        <!-- 弓弦 -->
+                        <line x1="32" y1="16" x2="32" y2="48" stroke="#c0c0c0" stroke-width="0.5"/>
+                        <!-- 箭 -->
+                        <line x1="32" y1="20" x2="32" y2="44" stroke="#6a5a4a" stroke-width="2"/>
+                        <polygon points="32,18 30,22 34,22" fill="#5a5a5a"/>
+                        <polygon points="32,46 30,42 34,42" fill="#8b4513"/>
+                    </svg>
+                </div>
+                <div class="grid-cell empty"></div>
+                <div class="grid-cell empty"></div>
+                
+                <!-- 第3行 -->
+                <div class="grid-cell empty"></div>
+                <div class="grid-cell empty"></div>
+                <div class="grid-cell empty"></div>
+                <div class="grid-cell empty"></div>
+            </div>
+        </div>
+        
+        <!-- 底部信息 -->
+        <div class="panel-footer">
+            <span>容量: 6/12</span>
+            <span class="item-count">物品: 6</span>
+        </div>
+    </div>
+</body>
+</html>
