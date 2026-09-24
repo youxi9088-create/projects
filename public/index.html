@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f4ef">
+    <title>教育互动游戏生产线健康度检测台</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./execution-detail.css">
+    <link rel="stylesheet" href="./huashu-refinement.css">
+    <link rel="stylesheet" href="./hallmark-refinement.css">
+    <link rel="stylesheet" href="./light-workbench.css">
+  </head>
+  <body data-page="overview">
+    <a class="skip-link" href="#top">跳到主要内容</a>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="返回健康概览">
+        <span class="brand-mark">R2</span>
+        <span><small>Multica · RPG2</small><strong>教育互动游戏生产线健康度检测台</strong></span>
+      </a>
+      <nav class="quick-nav" aria-label="页面导航">
+        <a href="./" aria-current="page">概览</a>
+        <a href="./risks.html">风险队列</a>
+        <a href="./production.html">生产线</a>
+        <a href="./agents.html">Agent</a>
+        <a href="./skills.html">Skill</a>
+        <a href="./rules.html">度量规则</a>
+        <a href="./schemes.html">互动方案</a>
+      </nav>
+      <div class="top-actions">
+        <span id="freshness" class="freshness" role="status" aria-live="polite">正在读取云端快照…</span>
+        <button id="collect-button" class="button primary">立即采集</button>
+      </div>
+    </header>
+
+    <main id="top" tabindex="-1">
+      <section id="hero" class="command-hero skeleton" aria-live="polite"></section>
+      <section id="action-strip" class="action-strip skeleton" aria-label="优先行动"></section>
+
+      <section class="dashboard-grid overview-top-grid" aria-label="健康趋势与生产线运行表现">
+        <section id="health-trend" class="panel trend-panel" aria-labelledby="trend-title">
+          <div class="panel-heading">
+            <div><p class="eyebrow">历史快照</p><h2 id="trend-title">健康度趋势</h2></div>
+            <p id="trend-caption" class="panel-caption">正在读取独立趋势指标…</p>
+          </div>
+          <div id="trend-controls" class="trend-controls" aria-label="健康度趋势筛选"></div>
+          <div id="trend-chart" class="panel-content trend-content skeleton" aria-live="polite"></div>
+        </section>
+        <section id="production-overview" class="panel overview-production-panel" aria-labelledby="production-overview-title">
+          <div class="panel-heading">
+            <div><p class="eyebrow">生产线</p><h2 id="production-overview-title">跑通表现与 Run 阶段</h2></div>
+            <a class="overview-panel-link" href="./production.html">查看审核队列与基础服务 →</a>
+          </div>
+          <div id="overview-production" class="panel-content skeleton" aria-live="polite"></div>
+        </section>
+      </section>
+
+      <section id="daily-health" class="panel daily-health-panel" aria-labelledby="daily-health-title">
+        <div class="panel-heading">
+          <div><p class="eyebrow">每日运行简报</p><h2 id="daily-health-title">每日健康度信息分析汇总</h2></div>
+          <p id="daily-health-caption" class="panel-caption">正在读取当日 Issue、能力变更与执行信号…</p>
+        </div>
+        <div id="daily-health-content" class="panel-content skeleton" aria-live="polite"></div>
+      </section>
+
+    </main>
+
+    <dialog id="detail-dialog" class="detail-dialog" aria-label="查看详情">
+      <form method="dialog" class="dialog-close"><button aria-label="关闭详情">×</button></form>
+      <div id="detail-content"></div>
+    </dialog>
+    <template id="empty-template"><div class="empty">当前筛选条件下没有需要处理的对象。</div></template>
+    <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+[
+  {
+    "skillId": "替换为 Multica Skill UUID",
+    "suite": "rpg-visual-asset-production-regression-v1",
+    "executedAt": "2026-08-10T08:00:00Z",
+    "passed": 18,
+    "total": 20,
+    "criticalFailures": 0,
+    "graderAgreement": 0.95,
+    "evidenceUrl": "file:///E:/rpg2-health-monitor/evidence/example.json"
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "name": "rpg2-health-monitor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local, read-only health dashboard for the Multica RPG2 production workspace.",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "collect": "node src/collector.js",
+    "collect:cloud": "node scripts/cloud-collect.mjs",
+    "migrate:cloud": "node scripts/migrate-local-to-cloud.mjs",
+    "migrate:line-history": "node scripts/import-historical-line-evidence.mjs",
+    "migrate:rework-history": "node scripts/import-historical-rework-evidence.mjs",
+    "init:cloud": "node scripts/init-cloud-env.mjs",
+    "build": "node scripts/build-fn.mjs",
+    "deploy": "fn deploy",
+    "migrate:trend": "node src/migrate-trend-history.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.62.1",
+    "playwright": "^1.62.1"
+  },
+  "dependencies": {
+    "@fn/functions": "https://f.new.ndhy.com/-/packages/fn-functions-latest.tgz",
+    "@fn/mongodb": "https://f.new.ndhy.com/-/packages/fn-mongodb-latest.tgz"
+  }
+}

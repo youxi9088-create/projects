@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f4ef">
+    <title>Agent · 教育互动游戏生产线健康度检测台</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./execution-detail.css">
+    <link rel="stylesheet" href="./huashu-refinement.css">
+    <link rel="stylesheet" href="./hallmark-refinement.css">
+    <link rel="stylesheet" href="./light-workbench.css">
+  </head>
+  <body data-page="agents">
+    <a class="skip-link" href="#top">跳到主要内容</a>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="返回健康概览"><span class="brand-mark">R2</span><span><small>Multica · RPG2</small><strong>教育互动游戏生产线健康度检测台</strong></span></a>
+      <nav class="quick-nav" aria-label="页面导航"><a href="./">概览</a><a href="./risks.html">风险队列</a><a href="./production.html">生产线</a><a href="./agents.html" aria-current="page">Agent</a><a href="./skills.html">Skill</a><a href="./rules.html">度量规则</a><a href="./schemes.html">互动方案</a></nav>
+      <div class="top-actions"><span id="freshness" class="freshness" role="status" aria-live="polite">正在读取本地快照…</span><button id="collect-button" class="button primary">立即采集</button></div>
+    </header>
+    <main id="top" tabindex="-1">
+      <section id="agents-section" class="section-heading page-heading"><div><p class="eyebrow">RPG互动教育游戏颗粒生产小队</p><h1>Agent 健康度</h1></div><p>仅展示该小队成员；查看评分、异常原因、运行可靠性与直接指派生产单的推进风险。</p></section>
+      <article class="panel entity-panel"><div class="panel-heading"><div><p class="eyebrow">Agent</p><h2>执行健康与推进责任</h2></div><span id="agent-count" class="panel-caption"></span></div><div id="agent-filters" class="filter-bar" aria-label="Agent 筛选"></div><div id="agents" class="table-wrap skeleton"></div></article>
+    </main>
+    <dialog id="detail-dialog" class="detail-dialog" aria-label="查看详情"><form method="dialog" class="dialog-close"><button aria-label="关闭详情">×</button></form><div id="detail-content"></div></dialog>
+    <template id="empty-template"><div class="empty">当前筛选条件下没有需要处理的对象。</div></template>
+    <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

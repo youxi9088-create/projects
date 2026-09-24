@@ -1,0 +1,185 @@
+/* Hallmark pass: calm operations UI with an obvious reading path and explicit interaction states. */
+:root {
+  --focus-ring: #c7d6cf;
+  --interactive: #c5d4cd;
+  --interactive-muted: #9eaea7;
+  --surface-raised: #242827;
+  --surface-hover: #2b302e;
+  --shadow-soft: 0 12px 28px rgb(0 0 0 / 16%);
+}
+
+body::before {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  content: '';
+  pointer-events: none;
+  background: radial-gradient(circle at 72% -12%, rgb(177 194 185 / 7%), transparent 34rem);
+}
+
+main { padding-top: clamp(22px, 3vw, 36px); }
+
+.topbar {
+  gap: 16px;
+  box-shadow: 0 1px 0 rgb(255 255 255 / 3%), 0 8px 24px rgb(0 0 0 / 9%);
+}
+
+.brand { min-width: 0; }
+.brand strong { overflow: hidden; text-overflow: ellipsis; }
+.quick-nav a {
+  position: relative;
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  color: #a8aeaa;
+  transition: color .14s ease, background .14s ease;
+}
+.quick-nav a[aria-current="page"] { color: var(--text); }
+.quick-nav a[aria-current="page"]::after {
+  position: absolute;
+  right: 9px;
+  bottom: 3px;
+  left: 9px;
+  height: 2px;
+  content: '';
+  border-radius: 99px;
+  background: var(--interactive-muted);
+}
+.freshness { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.page-heading {
+  align-items: start;
+  margin: 0 0 18px;
+  padding: 2px 0 18px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.page-heading > div { max-width: 720px; }
+.page-heading h1 { max-width: 18ch; font-size: clamp(1.65rem, 3vw, 2.35rem); line-height: 1.12; }
+.page-heading > p { max-width: 440px; text-align: left; line-height: 1.65; }
+
+.panel {
+  box-shadow: 0 1px 0 rgb(255 255 255 / 2%);
+  transition: border-color .16s ease, box-shadow .16s ease;
+}
+.panel:focus-within { border-color: #66726d; }
+.panel-heading { gap: 20px; }
+.panel-heading > div { min-width: 0; }
+.panel-heading h1, .panel-heading h2 { line-height: 1.22; }
+.panel-caption { line-height: 1.5; }
+
+.button,
+.filter-button,
+.overview-panel-link,
+.issue-link,
+.rework-detail-button,
+.detail-event,
+.review-issue-link {
+  transition: color .14s ease, border-color .14s ease, background .14s ease, transform .14s ease;
+}
+.button:active,
+.filter-button:active,
+.metric-link:active,
+.action-card:active,
+.incident:active,
+.rework-detail-button:active,
+.detail-event:active,
+.review-issue-link:active { transform: translateY(1px); }
+.button.primary { box-shadow: inset 0 1px 0 rgb(255 255 255 / 22%); }
+.button.primary:hover { color: #121716; background: #d0dad0; }
+.button.secondary:hover, .filter-button:hover { background: var(--surface-hover); }
+
+:where(button, a, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--focus-ring) !important;
+  outline-offset: 3px;
+}
+
+.action-card,
+.metric-link,
+.rework-detail-button,
+.detail-event,
+.review-issue-link { position: relative; }
+.action-card::after,
+.metric-link::after,
+.rework-detail-button::after,
+.detail-event::after,
+.review-issue-link::after {
+  content: '查看';
+  color: var(--interactive-muted);
+  font-size: .66rem;
+  font-weight: 720;
+  opacity: 0;
+  transition: opacity .14s ease;
+}
+.action-card:hover::after,
+.action-card:focus-visible::after,
+.metric-link:hover::after,
+.metric-link:focus-visible::after,
+.rework-detail-button:hover::after,
+.rework-detail-button:focus-visible::after,
+.detail-event:hover::after,
+.detail-event:focus-visible::after,
+.review-issue-link:hover::after,
+.review-issue-link:focus-visible::after { opacity: 1; }
+.action-card::after, .metric-link::after { position: absolute; right: 14px; bottom: 12px; }
+.rework-detail-button::after, .detail-event::after, .review-issue-link::after { margin-left: 6px; }
+
+.line-kpi-grid { gap: 10px; }
+.line-kpi { min-height: 124px; padding: 15px; }
+.line-kpi > span { display: block; max-width: 22ch; line-height: 1.35; }
+.line-kpi > strong { margin-top: 8px; font-variant-numeric: tabular-nums; }
+.line-kpi small { line-height: 1.5; }
+.line-kpi-note { max-width: 1100px; line-height: 1.7; }
+
+.filter-bar, .trend-controls { gap: 8px; }
+.filter-button { min-height: 32px; }
+.filter-button.selected { box-shadow: inset 0 0 0 1px rgb(225 233 227 / 9%); }
+
+.incident { min-height: 90px; }
+.incident-body { padding-top: 15px; padding-bottom: 15px; }
+.incident-title-row b { line-height: 1.38; }
+.incident-detail { line-height: 1.55; }
+.incident-open { white-space: nowrap; }
+
+.table-wrap { scrollbar-color: #606965 transparent; scrollbar-width: thin; }
+/* Tables inside scrolling panels must keep their header in normal table flow.
+   A sticky <th> can detach from its <thead> in Chromium and overlay rows. */
+.health-table th { position: static; background: #202322; }
+.health-table tbody tr { transition: background .14s ease; }
+.health-table tbody tr:hover { background: rgb(198 214 205 / 5%); }
+.health-table td { line-height: 1.5; }
+
+.detail-dialog {
+  width: min(880px, calc(100vw - 28px));
+  max-height: min(840px, calc(100vh - 28px));
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+}
+.detail-dialog::backdrop { background: rgb(6 8 8 / 66%); backdrop-filter: blur(3px); }
+.dialog-close button { width: 32px; height: 32px; border-radius: 50%; }
+.detail-dialog h2 { max-width: 28ch; line-height: 1.24; }
+
+@media (max-width: 1060px) {
+  .topbar { flex-wrap: wrap; padding-top: 10px; padding-bottom: 10px; }
+  .quick-nav { order: 3; width: 100%; overflow-x: auto; padding-bottom: 1px; }
+  .top-actions { margin-left: auto; }
+}
+
+@media (max-width: 720px) {
+  .topbar { gap: 9px; }
+  .brand small { display: none; }
+  .brand strong { max-width: 210px; font-size: .84rem; }
+  .top-actions { gap: 8px; }
+  .freshness { display: none; }
+  .quick-nav a { flex: 0 0 auto; padding-inline: 10px; }
+  .page-heading { display: block; padding-bottom: 15px; }
+  .page-heading > p { margin-top: 11px; font-size: .78rem; }
+  .panel-heading { display: block; }
+  .panel-caption { margin-top: 8px; text-align: left; }
+  .line-kpi-grid { grid-template-columns: 1fr; }
+  .detail-dialog { padding: 18px; }
+  .action-card::after, .metric-link::after { opacity: .85; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}

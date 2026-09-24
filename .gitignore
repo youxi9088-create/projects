@@ -1,0 +1,16 @@
+data/*.db
+data/*.db-*
+data/
+node_modules/
+.env
+.env.*
+!.env.example
+config/skill-evals.json
+dist/
+artifacts/
+analysis/
+test-results/
+.workbuddy/
+*.log
+.rpg2-*/
+vendor/multica

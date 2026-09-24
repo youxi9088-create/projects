@@ -1,0 +1,181 @@
+/* Production workbench: a quiet light surface for reviewing actual delivery flow. */
+body[data-page="production"] {
+  background: #f3f4ef;
+}
+
+body[data-page="production"]::before { display: none; }
+
+body[data-page="production"] main {
+  --panel: #fffefa;
+  --panel-strong: #f8f8f3;
+  --panel-muted: #f7f8f3;
+  --line: #d9ddd5;
+  --line-soft: rgb(78 91 82 / 18%);
+  --text: #202824;
+  --muted: #647168;
+  --subtle: #859087;
+  --blue: #477b70;
+  --blue-deep: #dceae4;
+  --critical: #b85d5d;
+  --critical-bg: #f8e9e7;
+  --warning: #9d7640;
+  --warning-bg: #fbf2e3;
+  --healthy: #43826a;
+  padding-top: 34px;
+}
+
+body[data-page="production"] .page-heading {
+  margin-bottom: 26px;
+  padding: 0 4px 21px;
+  border-bottom-color: #cfd6ce;
+}
+
+body[data-page="production"] .page-heading h1 {
+  max-width: none;
+  color: #1d2923;
+  font-size: clamp(1.78rem, 3vw, 2.55rem);
+  font-weight: 720;
+  letter-spacing: -.055em;
+}
+
+body[data-page="production"] .page-heading > p {
+  max-width: 430px;
+  color: #69746d;
+  font-size: .8rem;
+}
+
+body[data-page="production"] .eyebrow { color: #5d776b; }
+
+body[data-page="production"] .panel {
+  border-color: #d5dcd3;
+  border-radius: 10px;
+  background: #fffefa;
+  box-shadow: 0 8px 22px rgb(40 54 45 / 5%);
+}
+
+body[data-page="production"] .panel-heading {
+  padding: 20px 22px 16px;
+  border-bottom-color: #e2e6df;
+  background: #fcfcf8;
+}
+
+body[data-page="production"] .panel-heading h2,
+body[data-page="production"] .panel-heading h1 { color: #26322c; }
+body[data-page="production"] .panel-caption { color: #6d776f; }
+body[data-page="production"] .panel-content { padding: 20px 22px; }
+
+/* First section is a compact status ledger rather than a visually heavy card. */
+body[data-page="production"] .production-status-panel {
+  margin-top: 0;
+  border-top: 3px solid #85a99a;
+}
+
+body[data-page="production"] .bar-list { gap: 12px; }
+body[data-page="production"] .bar-row { color: #526057; }
+body[data-page="production"] .bar-row strong { color: #29352e; }
+body[data-page="production"] .bar-track { height: 8px; background: #e6eae4; }
+body[data-page="production"] .bar-fill { background: #78a697; }
+body[data-page="production"] .bar-fill.critical { background: #c57772; }
+body[data-page="production"] .bar-fill.warning { background: #c89a57; }
+body[data-page="production"] .issue-status-reconcile {
+  margin: 16px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid #e1e6df;
+  color: #69766d;
+  font-size: .72rem;
+  line-height: 1.5;
+}
+body[data-page="production"] .issue-status-reconcile strong { color: #3b7464; font-variant-numeric: tabular-nums; }
+
+body[data-page="production"] .production-one-pass-panel,
+body[data-page="production"] .production-rework-analysis-panel { margin-top: 18px; }
+
+body[data-page="production"] .production-one-pass-panel { border-top: 3px solid #8cae9e; }
+body[data-page="production"] .production-rework-analysis-panel { border-top: 3px solid #c89a83; }
+
+body[data-page="production"] .health-table { color: #304038; }
+body[data-page="production"] .health-table th {
+  color: #758078;
+  background: #f7f8f4;
+  letter-spacing: .055em;
+}
+body[data-page="production"] .health-table th,
+body[data-page="production"] .health-table td { border-bottom-color: #e0e5dd; }
+body[data-page="production"] .health-table tbody tr:hover { background: #f4f8f4; }
+body[data-page="production"] .issue-link { color: #356c60; }
+body[data-page="production"] .one-pass-status {
+  border-color: #a5c5b4;
+  color: #39745e;
+  background: #eef7f1;
+}
+body[data-page="production"] .one-pass-details {
+  border: 1px solid #dbe2d9;
+  border-radius: 8px;
+  background: #fcfcf8;
+}
+body[data-page="production"] .one-pass-details > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  color: #356d5f;
+  cursor: pointer;
+  font-size: .78rem;
+  font-weight: 740;
+  list-style-position: inside;
+}
+body[data-page="production"] .one-pass-details > summary small {
+  flex: 0 0 auto;
+  color: #6c7b71;
+  font-size: .7rem;
+  font-weight: 650;
+}
+body[data-page="production"] .one-pass-details[open] > summary { border-bottom: 1px solid #e1e6df; }
+body[data-page="production"] .one-pass-details .table-wrap { padding: 0 14px 14px; }
+
+body[data-page="production"] .rework-issue-box,
+body[data-page="production"] .rework-analysis-card {
+  border-color: #e1d7cf;
+  background: #fffdf9;
+  box-shadow: none;
+}
+body[data-page="production"] .rework-issue-id { color: #9d6458; }
+body[data-page="production"] .rework-issue-box h3,
+body[data-page="production"] .rework-analysis-card h3 { color: #2e3933; }
+body[data-page="production"] .rework-box-count strong { color: #a9695b; }
+body[data-page="production"] .rework-box-signal { color: #5b776c; }
+body[data-page="production"] .rework-box-signal b { color: #526159; }
+body[data-page="production"] .rework-detail-button {
+  border-color: #c7d3ca;
+  color: #3d6659;
+  background: #f4f8f3;
+}
+body[data-page="production"] .rework-detail-button:hover { background: #eaf2eb; }
+
+body[data-page="production"] .operations-grid { margin-top: 18px; gap: 18px; }
+body[data-page="production"] .stage-row,
+body[data-page="production"] .service-row { border-bottom-color: #e0e5dd; }
+body[data-page="production"] .stage-row span,
+body[data-page="production"] .service-row p,
+body[data-page="production"] .service-row > span { color: #667269; }
+body[data-page="production"] .stage-row strong,
+body[data-page="production"] .service-row strong { color: #2d3932; }
+body[data-page="production"] .stage-row em { color: #ad5e58; }
+body[data-page="production"] .review-issue-link:hover { background: #eff6f0; }
+body[data-page="production"] .review-issue-link strong,
+body[data-page="production"] .review-issue-link em,
+body[data-page="production"] .overview-panel-link { color: #3f7568; }
+
+body[data-page="production"] .empty {
+  border-color: #cfd8cf;
+  color: #758177;
+  background: #fafbf8;
+}
+
+@media (max-width: 760px) {
+  body[data-page="production"] main { padding-top: 22px; }
+  body[data-page="production"] .page-heading { margin-bottom: 18px; }
+  body[data-page="production"] .panel-heading,
+  body[data-page="production"] .panel-content { padding-right: 16px; padding-left: 16px; }
+}

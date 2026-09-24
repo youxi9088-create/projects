@@ -1,0 +1,117 @@
+/* Production ledger refinement: evidence-first, compact and non-generic. */
+:root {
+  --canvas: #151718;
+  --panel: #1d2021;
+  --panel-strong: #272a2b;
+  --panel-muted: #191c1d;
+  --line: #454a49;
+  --line-soft: rgb(112 120 117 / 42%);
+  --text: #e8e9e5;
+  --muted: #adb2ad;
+  --subtle: #838985;
+  --blue: #9db8bd;
+  --blue-deep: #2b4245;
+  --critical: #ce9292;
+  --critical-bg: #322426;
+  --warning: #c9ae7d;
+  --warning-bg: #332d23;
+  --healthy: #8eb79f;
+  --shadow: 0 18px 40px rgb(0 0 0 / 18%);
+}
+
+html { background: var(--canvas); }
+body {
+  background:
+    linear-gradient(90deg, rgb(215 224 220 / 1.4%) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(#191c1d 1px, transparent 1px) 0 0 / 24px 24px,
+    var(--canvas);
+}
+
+/* A quiet inspection bench rather than a glossy application bar. */
+.topbar { min-height: 70px; gap: 20px; border-bottom-color: #4e5352; background: rgb(21 23 24 / 94%); backdrop-filter: blur(10px); }
+.brand-mark { width: 34px; height: 34px; border-color: #8f9b96; border-radius: 3px; color: #d3d9d1; background: #242728; }
+.brand small { color: #aebcb3; }
+.quick-nav { gap: 1px; }
+.quick-nav a { border-radius: 3px; }
+.quick-nav a:hover, .quick-nav a[aria-current="page"], .quick-nav a:focus-visible { background: #2b2e2f; }
+.freshness, .metric strong, .action-card > strong { font-variant-numeric: tabular-nums lining-nums; }
+.button { border-radius: 4px; }
+.button.primary { color: #15201e; background: #b8c4b7; }
+.button.primary:hover { background: #cad3c7; }
+.button.secondary { border-color: #5f6764; background: #262a2a; }
+.button.danger { border-color: #815c5e; }
+
+/* Reading order: decision, then the source evidence. */
+.command-hero { border-color: #545b58; border-left: 3px solid #96aaa3; border-radius: 7px; background: linear-gradient(112deg, #272a29 0%, #1e2122 62%, #202324 100%); box-shadow: none; }
+.hero-copy { margin-left: 0; }
+.hero-score { border-radius: 5px; background: #1a1d1d; }
+.hero-copy .hero-decision { color: #dce0da; }
+.eyebrow { color: #aebcb3; letter-spacing: .11em; }
+.hero-context { border-top-color: #505653; }
+
+.panel, .source-note, .detail-dialog { border-radius: 7px; }
+.panel { border-color: #454b49; box-shadow: none; }
+.panel-heading { padding-bottom: 13px; background: rgb(225 231 226 / 1.4%); }
+.panel-heading h2, .section-heading h2 { text-wrap: balance; }
+.panel-caption { color: #a7ada8; }
+.panel-content { padding-top: 20px; }
+.section-heading { margin-top: 40px; }
+
+/* Metrics become a ledger row; numbers carry severity instead of rounded chrome. */
+.action-strip, .metric-grid { gap: 0; border: 1px solid var(--line); border-radius: 7px; overflow: hidden; background: var(--line); }
+.action-card, .metric { min-height: 112px; border: 0; border-radius: 0; background: var(--panel); }
+.action-card + .action-card, .metric + .metric { border-left: 1px solid var(--line); }
+.action-card.critical { background: #282123; }
+.action-card.warning { background: #28251f; }
+.action-card.neutral { background: #1d2021; }
+.action-card:hover, .metric-link:hover { transform: none; border-color: transparent; background: #2a2e2d; }
+.metric-link small { color: #b9c5bd; }
+
+.trend-controls, .filter-bar, .risk-definitions { background: #191c1d; }
+.filter-button { border-color: #5b625f; border-radius: 4px; }
+.filter-button.selected { border-color: #8fa49d; color: #e0e6e0; background: #2c3432; }
+.trend-grid line { stroke: #505653; }
+.trend-point { fill: #252827; }
+.trend-point.latest { stroke: #d7dfd8; }
+.trend-latest-value { fill: #e4e8e2; }
+
+/* The production KPIs use the same muted semantic language as the shell. */
+.line-performance { border-color: #47514e; background: #1b1e1f; }
+.line-performance .subheading span { color: #b7c3bd; background: #2a3331; }
+.line-kpi { border-color: #484f4c; background: #1b1e1e; }
+.line-kpi > strong { color: #d3d9d6; }
+.line-kpi.healthy { border-color: #527060; }
+.line-kpi.healthy > strong { color: #90b6a0; }
+.line-kpi.warning { border-color: #716246; }
+.line-kpi.warning > strong { color: #c6ab7d; }
+.line-kpi-note { color: #929994; }
+
+/* Evidence components: enough contrast to scan, not an extra layer of chrome. */
+.incident, .rework-issue-box, .rework-analysis-card, .daily-section, .line-performance, .review-queue { border-radius: 6px; background: var(--panel-muted); }
+.incident:hover { border-color: #798580; background: #292d2d; }
+.incident-repair, .recovery-hint, .analysis-summary { border-left-color: #94aaa2; background: #272b2a; color: #dce2dc; }
+.rework-issue-box, .rework-analysis-card { background: linear-gradient(135deg, rgb(91 61 64 / 22%), var(--panel-muted)); }
+.rework-node-card { border-radius: 5px; background: #1a1d1d; }
+.rework-reason, .rework-evidence-excerpt { border-left-color: #98aaa1; background: #262a29; }
+.rework-evidence { border-color: #515a56; background: #151717; }
+.daily-blocker, .daily-recurring, .daily-capability { border-radius: 5px; background: #191c1d; }
+.detail-dialog { border-color: #606864; background: #1b1e1f; }
+.detail-dialog pre { background: #121414; }
+.detail-event, .reason, .trend-table, .skill-number, .daily-stat { border-radius: 5px; background: #191c1d; }
+.one-pass-status { border-color: #516e5f; color: #a8c7b3; background: rgb(91 124 104 / 12%); }
+
+/* Long node names and evidence keep their complete reading path. */
+.incident-title-row b, .stage-row span, .service-row strong, .reason small { white-space: normal; text-overflow: clip; overflow-wrap: anywhere; }
+.incident-title-row { align-items: flex-start; }
+.incident-open { color: #b7c5bc; }
+
+/* Isolate long lists so switching/scrolling does not reflow every Issue box. */
+.incident-list, .rework-analysis-list, .rework-issue-grid, .daily-analysis-grid { content-visibility: auto; contain-intrinsic-size: auto 640px; }
+
+@media (max-width: 1050px) {
+  .action-strip, .metric-grid { gap: 1px; border-radius: 7px; }
+  .action-card + .action-card, .metric + .metric { border-left: 0; }
+}
+@media (max-width: 760px) {
+  .topbar { background: #151718; }
+}

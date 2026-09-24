@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f4ef">
+    <title>互动方案 · 教育互动游戏生产线健康度检测台</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./huashu-refinement.css">
+    <link rel="stylesheet" href="./hallmark-refinement.css">
+    <link rel="stylesheet" href="./light-workbench.css">
+  </head>
+  <body data-page="schemes">
+    <a class="skip-link" href="#top">跳到主要内容</a>
+    <header class="topbar">
+      <a class="brand" href="./"><span class="brand-mark">R2</span><span><small>Multica · RPG2</small><strong>教育互动游戏生产线健康度检测台</strong></span></a>
+      <nav class="quick-nav" aria-label="页面导航"><a href="./">概览</a><a href="./risks.html">风险队列</a><a href="./production.html">生产线</a><a href="./agents.html">Agent</a><a href="./skills.html">Skill</a><a href="./rules.html">度量规则</a><a href="./schemes.html" aria-current="page">互动方案</a></nav>
+      <div class="top-actions"><span id="freshness" class="freshness" role="status">互动方案使用汇总</span><button id="collect-button" class="button primary">立即采集</button></div>
+    </header>
+    <main id="top" tabindex="-1">
+      <section class="section-heading page-heading"><div><p class="eyebrow">互动方案库</p><h1>互动方案</h1></div><p>interactive-game-schemes skill 定义的 28 种互动方案。每种方案同时展示：覆盖颗粒数（同一 Issue 去重）与使用次数（同一 Issue 内多次明确使用会累加）。每次云端同步完成后，对每个已完成（done）的颗粒生产 Issue 做互动方案分析并汇总到本页。</p></section>
+      <section class="panel"><div class="panel-heading"><div><p class="eyebrow">使用汇总</p><h2>方案使用次数、覆盖颗粒数与涉及 Issue</h2></div><p id="schemes-caption" class="panel-caption">正在读取互动方案使用汇总…</p></div><div id="schemes-content" class="panel-content skeleton" aria-live="polite"></div></section>
+    </main>
+    <p id="announcement" class="sr-only" role="status"></p>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

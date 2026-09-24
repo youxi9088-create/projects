@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f4ef">
+    <title>生产线 · 教育互动游戏生产线健康度检测台</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./execution-detail.css">
+    <link rel="stylesheet" href="./huashu-refinement.css">
+    <link rel="stylesheet" href="./hallmark-refinement.css">
+    <link rel="stylesheet" href="./production-light.css">
+  </head>
+  <body data-page="production">
+    <a class="skip-link" href="#top">跳到主要内容</a>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="返回健康概览"><span class="brand-mark">R2</span><span><small>Multica · RPG2</small><strong>教育互动游戏生产线健康度检测台</strong></span></a>
+      <nav class="quick-nav" aria-label="页面导航"><a href="./">概览</a><a href="./risks.html">风险队列</a><a href="./production.html" aria-current="page">生产线</a><a href="./agents.html">Agent</a><a href="./skills.html">Skill</a><a href="./rules.html">度量规则</a><a href="./schemes.html">互动方案</a></nav>
+      <div class="top-actions"><span id="freshness" class="freshness" role="status" aria-live="polite">正在读取本地快照…</span><button id="collect-button" class="button primary">立即采集</button></div>
+    </header>
+    <main id="top" tabindex="-1">
+      <section id="operations" class="section-heading page-heading"><div><p class="eyebrow">RPG互动教育游戏颗粒生产小队</p><h1>生产线状态、返工分析与基础服务</h1></div><p>生产线跑通表现与 Run 阶段在概览查看；本页展示当前 Issue 状态、每个多次返工 Issue 的节点化分析、可点击的审核队列和采集依赖探针。</p></section>
+      <section id="production-issue-status-panel" class="panel production-status-panel" aria-labelledby="production-issue-status-title">
+        <div class="panel-heading"><div><p class="eyebrow">生产线</p><h2 id="production-issue-status-title">生产 Issue 状态分布</h2></div></div>
+        <div id="production-issue-status" class="panel-content skeleton" aria-live="polite"></div>
+      </section>
+      <section id="production-one-pass-panel" class="panel production-one-pass-panel" aria-labelledby="production-one-pass-title">
+        <div class="panel-heading"><div><p class="eyebrow">跑通表现</p><h2 id="production-one-pass-title">一次性跑通 Issue</h2></div><p id="production-one-pass-caption" class="panel-caption"></p></div>
+        <div id="production-one-pass-issues" class="panel-content skeleton" aria-live="polite"></div>
+      </section>
+      <section id="production-rework-analysis" class="panel production-rework-analysis-panel" aria-labelledby="production-rework-analysis-title">
+        <div class="panel-heading"><div><p class="eyebrow">返工风险</p><h2 id="production-rework-analysis-title">多次返工 Issue 分析明细</h2></div><p id="production-rework-caption" class="panel-caption"></p></div>
+        <div id="production-rework-issues" class="panel-content skeleton" aria-live="polite"></div>
+      </section>
+      <section class="dashboard-grid operations-grid">
+        <article class="panel"><div class="panel-heading"><div><p class="eyebrow">生产线</p><h2>审核中队列</h2></div><a class="overview-panel-link" href="./">查看生产线表现 →</a></div><div id="production-review" class="panel-content skeleton"></div></article>
+        <article class="panel service-panel"><div class="panel-heading"><div><p class="eyebrow">基础服务</p><h2>采集与依赖探针</h2></div></div><div id="services" class="panel-content skeleton"></div></article>
+      </section>
+    </main>
+    <dialog id="detail-dialog" class="detail-dialog" aria-label="查看详情"><form method="dialog" class="dialog-close"><button aria-label="关闭详情">×</button></form><div id="detail-content"></div></dialog>
+    <template id="empty-template"><div class="empty">当前筛选条件下没有需要处理的对象。</div></template>
+    <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

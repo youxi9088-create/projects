@@ -1,0 +1,17 @@
+.status-dot.unknown {
+  background: #70839f;
+}
+
+.skill-summary {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.skill-table {
+  margin-top: 20px;
+}
+
+@media (max-width: 520px) {
+  .skill-summary {
+    grid-template-columns: 1fr;
+  }
+}

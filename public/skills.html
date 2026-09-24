@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f4ef">
+    <title>Skill · 教育互动游戏生产线健康度检测台</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./execution-detail.css">
+    <link rel="stylesheet" href="./huashu-refinement.css">
+    <link rel="stylesheet" href="./hallmark-refinement.css">
+    <link rel="stylesheet" href="./light-workbench.css">
+  </head>
+  <body data-page="skills">
+    <a class="skip-link" href="#top">跳到主要内容</a>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="返回健康概览"><span class="brand-mark">R2</span><span><small>Multica · RPG2</small><strong>教育互动游戏生产线健康度检测台</strong></span></a>
+      <nav class="quick-nav" aria-label="页面导航"><a href="./">概览</a><a href="./risks.html">风险队列</a><a href="./production.html">生产线</a><a href="./agents.html">Agent</a><a href="./skills.html" aria-current="page">Skill</a><a href="./rules.html">度量规则</a><a href="./schemes.html">互动方案</a></nav>
+      <div class="top-actions"><span id="freshness" class="freshness" role="status" aria-live="polite">正在读取本地快照…</span><button id="collect-button" class="button primary">立即采集</button></div>
+    </header>
+    <main id="top" tabindex="-1">
+      <section id="skills-section" class="section-heading page-heading"><div><p class="eyebrow">RPG互动教育游戏颗粒生产小队</p><h1>近 7 天颗粒生产已调用 Skill</h1></div><p>默认只展示标题含「【颗粒生产】」的直接指派 Issue 中，有显式工具调用证据的 Skill。运行表现、Darwin 评价与发布状态均基于这些实际调用；完整关联目录仍可按需查看。</p></section>
+      <article class="panel entity-panel"><div class="panel-heading"><div><p class="eyebrow">实测范围</p><h2>调用表现、质量与发布状态</h2></div><button id="architecture-review-button" class="button secondary" type="button">发起 Skill 架构评审</button></div><div id="skills" class="panel-content skeleton"></div></article>
+    </main>
+    <dialog id="detail-dialog" class="detail-dialog" aria-label="查看详情"><form method="dialog" class="dialog-close"><button aria-label="关闭详情">×</button></form><div id="detail-content"></div></dialog>
+    <dialog id="architecture-review-dialog" class="architecture-review-dialog" aria-label="Skill 架构评审">
+      <div class="architecture-review-shell">
+        <header class="architecture-review-heading"><div><p class="eyebrow">Darwin 架构评审任务</p><h2>选择 Skill 并确认测试 Prompt</h2><p>确认后将在 RPG2 工作区创建“完成skill架构评审”Issue，由已发布的 Darwin Skill、评审执行官与独立 Judge 完成评审和文档交付。</p></div><button id="architecture-review-close" class="dialog-icon-close" type="button" aria-label="关闭架构评审">×</button></header>
+        <div id="architecture-review-content" class="architecture-review-content"></div>
+      </div>
+    </dialog>
+    <template id="empty-template"><div class="empty">当前筛选条件下没有需要处理的对象。</div></template>
+    <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
