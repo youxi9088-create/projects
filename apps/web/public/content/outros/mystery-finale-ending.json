@@ -1,0 +1,53 @@
+{
+  "type": "ending_screen",
+  "video": "mystery-finale.mp4",
+  "duration": 15.041667,
+  "subtitles": "mystery-finale.srt",
+  "ending_text": {
+    "display_delay_seconds": 13.0,
+    "lines": [
+      {
+        "text": "沿着星图，找回制图师",
+        "style": "title",
+        "font_size": 56,
+        "color": "#F5E8C7",
+        "shadow": "#000000",
+        "delay_seconds": 13.0,
+        "fade_in_seconds": 1.0,
+        "hold_seconds": 1.5
+      },
+      {
+        "text": "主线案件 · 已归档",
+        "style": "subtitle",
+        "font_size": 32,
+        "color": "#A89876",
+        "shadow": "#000000",
+        "delay_seconds": 13.8,
+        "fade_in_seconds": 0.8,
+        "hold_seconds": 1.2
+      }
+    ],
+    "background": "fade_to_dark",
+    "transition": "fade_out_after_2_seconds"
+  },
+  "audio_layers": [
+    {"type": "narration", "voice": "zh-CN-YunjianNeural", "rate": "-12%", "pitch": "-3Hz"},
+    {"type": "music", "style": "low_strings_piano_to_bright_D_major", "key": "D"},
+    {"type": "sfx", "items": ["rain_continuous", "watch_tick", "paper_rustle", "foghorn", "clock_tower_bell", "star_chart_reveal"]}
+  ],
+  "scene_alignment": [
+    {"seconds": "0-3",   "scene": "detective_desktop",    "subtitle_id": 1},
+    {"seconds": "3-7.5", "scene": "archive_transition",   "subtitle_id": 2},
+    {"seconds": "7.5-11.5","scene": "harbor_to_clocktower","subtitle_id": 3},
+    {"seconds": "11.5-15","scene": "mapmaker_workshop",    "subtitle_id": 4}
+  ],
+  "render_notes": {
+    "watermark_removed": true,
+    "subtitles_burned_in": false,
+    "ending_text_in_video": false,
+    "aspect_ratio": "3:2 (1764x1176, near 16:9)",
+    "video_bitrate_kbps": 5345,
+    "audio": "AAC 192kbps 44.1kHz mono",
+    "design_intent": "Pure footage + audio track. Game overlays subtitles + ending text at runtime for localization flexibility."
+  }
+}

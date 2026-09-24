@@ -1,0 +1,17 @@
+{
+  "name": "hidden-object-web",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.28.2",
+  "scripts": {
+    "dev": "concurrently -n web,api -c cyan,magenta \"pnpm --filter @hog/web dev\" \"pnpm --filter @hog/api dev\"",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "generate:fixtures": "pnpm --filter @hog/level-engine test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.4"
+  }
+}

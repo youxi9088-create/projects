@@ -1,0 +1,125 @@
+:root {
+  /* 中性阶 5 */
+  --neutral-1: #171009;
+  --neutral-2: #261b12;
+  --neutral-3: #352719;
+  --neutral-4: #463522;
+  --neutral-5: #584430;
+
+  /* 材质：纸张保持暖白 */
+  --paper: #e9dcbe;
+  --paper-shade: #d9c9a4;
+
+  /* 语义表面 */
+  --surface-base: var(--neutral-1);
+  --surface-sunken: var(--neutral-2);
+  --surface-panel: var(--neutral-3);
+  --surface-card: var(--neutral-4);
+  --surface-raised: var(--neutral-5);
+  --surface-scrim: rgba(23, 16, 9, .72);
+
+  /* 强调 1 主 + 1 辅 + 1 点缀 */
+  --accent-primary: #e5b76b;
+  --accent-warm: #e5b76b;
+  --accent-secondary: #94b184;
+  --accent-danger: #db825b;
+
+  /* 文字 */
+  --text-primary: #f6ead2;
+  --text-secondary: #cdb693;
+  --text-tertiary: #b09474;
+  --text-on-paper: #3b2a17;
+  --text-on-paper-soft: #6b563a;
+  --text-on-accent: #241703;
+  --text-on-warm: #241703;
+  --text-success: #bcd4ac;
+  --text-danger: #f0b9a4;
+
+  /* 描边 */
+  --border-subtle: var(--neutral-3);
+  --border-default: var(--neutral-5);
+  --border-control: #947d5e;
+  --border-accent: var(--accent-warm);
+
+  /* 状态表面 */
+  --surface-success: #2c3a27;
+  --surface-info: #26332b;
+  --surface-danger: #40261d;
+
+  /* 焦点 */
+  --focus-ring: #f2c985;
+
+  /* 阴影 3 档 */
+  --shadow-1: 0 1px 2px rgba(23, 13, 6, .32);
+  --shadow-2: 0 4px 14px rgba(23, 13, 6, .36);
+  --shadow-3: 0 14px 36px rgba(23, 13, 6, .44);
+
+  /* 圆角 3 阶 + 形状例外 */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* 间距 4pt */
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-8: 32px; --space-10: 40px;
+  --space-12: 48px; --space-16: 64px;
+
+  /* 动效 3 档 */
+  --motion-fast: 120ms;
+  --motion-base: 200ms;
+  --motion-slow: 320ms;
+  --ease-out: cubic-bezier(.22, .68, .32, 1);
+
+  /* 材质 */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23g)'/%3E%3C/svg%3E");
+  --rule-ink: rgba(229, 183, 107, .18);
+
+  /* 字体与层级 */
+  --font-serif: Georgia, "Songti SC", "Source Han Serif SC", "Noto Serif SC", "SimSun", serif;
+  --font-sans: "PingFang SC", "HarmonyOS Sans SC", "Microsoft YaHei UI", "Source Han Sans SC", "Noto Sans SC", system-ui, -apple-system, sans-serif;
+  --font-mono: "Cascadia Mono", "Sarasa Mono SC", Consolas, "Courier New", monospace;
+  --control-min-height: 44px;
+  --control-font-size: 14px;
+  --control-font-weight: 600;
+  --nav-font-weight: 500;
+  --z-canvas: 1; --z-sticky: 4; --z-toast: 8; --z-modal: 10; --z-cutscene: 12;
+
+  color: var(--text-primary);
+  background: var(--surface-base);
+  font-family: var(--font-sans);
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button { font: inherit; }
+
+:where(button, a, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* 中文排版基线：中文不加字距，标点不溢出，标题不做强制拉伸 */
+:where(h1, h2, h3, h4, p, li, button, span, strong, small) {
+  letter-spacing: 0;
+  text-wrap: pretty;
+}
+
+/* 全局细噪点：压掉纯色渐变的塑料感，只铺在游戏层，弹窗保持干净 */
+body::after {
+  position: fixed;
+  z-index: 6;
+  inset: 0;
+  pointer-events: none;
+  background-image: var(--grain);
+  opacity: .035;
+  content: '';
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::after { display: none; }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@hog/api",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file=../../.env --import tsx --watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "oxlint src",
+    "test": "vitest run src"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.2.0",
+    "@hog/contracts": "workspace:*",
+    "@hog/level-engine": "workspace:*",
+    "fastify": "^5.6.0",
+    "openai": "^6.33.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "oxlint": "^1.79.0",
+    "tsx": "^4.21.0",
+    "typescript": "~6.0.2",
+    "vitest": "^4.1.11"
+  }
+}

@@ -1,0 +1,515 @@
+{
+  "version": 1,
+  "skills": {
+    "accessibility-wireframe-review": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/accessibility-wireframe-review/SKILL.md",
+      "computedHash": "9f69f7c9e631fb64c0b0f6555f63f91bbb538271b7c2b42c6c60f27834059f54"
+    },
+    "app-specific-component-planner": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/app-specific-component-planner/SKILL.md",
+      "computedHash": "faff6279dcdb50c87f74ab1cc8a3a9192b64e8a703709ee7e61c30e0ff4f883e"
+    },
+    "apply-style-reference": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/apply-style-reference/SKILL.md",
+      "computedHash": "5db26d5f129ff2df976e63bc1adf1fb7f3ea0cbd20421aed3026d2dfb42e0437"
+    },
+    "audit-conversion-flow": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/audit-conversion-flow/SKILL.md",
+      "computedHash": "664986f574eadf47988784fd4e5de2dde406ba6c6a09b0191e06514ced36cb27"
+    },
+    "audit-copy-for-brand-voice": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/audit-copy-for-brand-voice/SKILL.md",
+      "computedHash": "cd466f9458071b917c5e5afb88d48429305e7150bb562e4a3e5317750e40baee"
+    },
+    "audit-copy-for-conversion": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/audit-copy-for-conversion/SKILL.md",
+      "computedHash": "7a9e840a931c2d3e213cb47c81b77189f8b48ccce71c9fe7c22cd1a0a6e4a721"
+    },
+    "audit-copy-for-user-journey": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/audit-copy-for-user-journey/SKILL.md",
+      "computedHash": "05d22a33a2f3d080c580f2dbd1180aede85f0ebb28836f4d76344ea4c14d58f2"
+    },
+    "audit-design-system-completeness": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/audit-design-system-completeness/SKILL.md",
+      "computedHash": "52977ed1c6997792ac58617972f45d03cac4c0a81ba9d2dc8e04400b7f6ccc4c"
+    },
+    "audit-design-system-consistency": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/audit-design-system-consistency/SKILL.md",
+      "computedHash": "5b2d45dff426d87582ee31e37d7fdd0a1ceb22071e1aa8ec5d6a8e966c135d43"
+    },
+    "audit-design-system-naming": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/audit-design-system-naming/SKILL.md",
+      "computedHash": "7d679528165600b35be49c4c853b4ec00c9d6c5fdd43ba98a82931c64f9e197a"
+    },
+    "audit-prototype-copy": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/audit-prototype-copy/SKILL.md",
+      "computedHash": "f96156873eefb26b0541c5e8d8fc9e1cc4c939909d72c1e63bda71cb09b4a47c"
+    },
+    "audit-prototype-interactions": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/audit-prototype-interactions/SKILL.md",
+      "computedHash": "85a6e28a8ddf39607ca82184d5b15130b46ddf94bc932874bf25edca8139a662"
+    },
+    "audit-style-application": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/audit-style-application/SKILL.md",
+      "computedHash": "aa00d3c0926e8dcd451c5753dc8426e64a8e5c5b4390f384600f1625b7fd63a1"
+    },
+    "audit-user-journey": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/audit-user-journey/SKILL.md",
+      "computedHash": "ce3c99dcdbee90e2de2cebc0b45a1dc505ea9f3cc39a338580b4dc00e333388e"
+    },
+    "blend-style-references": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/blend-style-references/SKILL.md",
+      "computedHash": "0d972fabcbc6dd142d3111b6af491ad3eb77f7ce97c70581c6248664b2427a3c"
+    },
+    "component-spec-to-react-plan": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/component-spec-to-react-plan/SKILL.md",
+      "computedHash": "f129b9bd90749385b1933e1aa8391a66ee5f8559b683e4d78a3b0093880e8611"
+    },
+    "component-wireframe-planner": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/component-wireframe-planner/SKILL.md",
+      "computedHash": "1a434329429be40c5ad2a3dfc8d4365010038147b097161b97e8005190b8c8a5"
+    },
+    "curate-ui-knowledge": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/curate-ui-knowledge/SKILL.md",
+      "computedHash": "79ad4503d5af1c8887c317d48601f5b68c80df33056dc5fd43daf319dd17909a"
+    },
+    "design-terminology": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/design-terminology/SKILL.md",
+      "computedHash": "e4e7d5f3c1d44c74d3e55207e88a731d548ebe21bd2d4becf349660238038e42"
+    },
+    "explain-blueprint-lineage": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/explain-blueprint-lineage/SKILL.md",
+      "computedHash": "7a428f8a4d9e7e16cb5555bfc090ed37fc250f5fd41f669371dbefba0351b21c"
+    },
+    "extract-brand-foundation": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/extract-brand-foundation/SKILL.md",
+      "computedHash": "5c9df0493601bf6f03439197f3395692864c97c9381154bcfe360cb0626d8042"
+    },
+    "extract-copy-patterns-from-study": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/extract-copy-patterns-from-study/SKILL.md",
+      "computedHash": "33badfbe9073dc1674b6d18f5b444fdafa0dc48d429d3a2714f552c3eca6e66b"
+    },
+    "extract-iconography-foundation": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/extract-iconography-foundation/SKILL.md",
+      "computedHash": "b3be0b7573f7082db6559bd0100acfa42fa880ec37b7feaa951a14304085da88"
+    },
+    "extract-palette-foundation": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/extract-palette-foundation/SKILL.md",
+      "computedHash": "584dfe0ad846af8a3d6eced73f59d61205552c0b5972ba54726e60f75fdb4c8a"
+    },
+    "extract-style-from-reference": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/extract-style-from-reference/SKILL.md",
+      "computedHash": "0e672d676ed944c6fce28fd464db30659afe8996d6766da1418a1a5f20d58f3c"
+    },
+    "extract-typography-foundation": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/extract-typography-foundation/SKILL.md",
+      "computedHash": "2493ad4511705d50e896360665bf13da1d9b6f1f2d85e3d590b37aaf124f89c0"
+    },
+    "extract-ui-pattern-knowledge": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/extract-ui-pattern-knowledge/SKILL.md",
+      "computedHash": "5443b18564d26767e6b6c92691b58e9ff0c8d93c7608dfb4bfcbb5cabffb1daf"
+    },
+    "generate-accessibility-audit-report": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-accessibility-audit-report/SKILL.md",
+      "computedHash": "75e5ff65ababb2185d2b87514144058cd545620bc2147a2154f18c7e0cbe006c"
+    },
+    "generate-blueprint-from-knowledge": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-blueprint-from-knowledge/SKILL.md",
+      "computedHash": "dcecfc7b48d1a5c860643030db8f6851cad30d3f033a1481c0a179a46cf31e3b"
+    },
+    "generate-button-foundation": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-button-foundation/SKILL.md",
+      "computedHash": "5a4fe4f6619131f898836d47b609c02c2b27288d18aa162eaacee337ed89b0ae"
+    },
+    "generate-card-foundation": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-card-foundation/SKILL.md",
+      "computedHash": "31c8553dcf50bfd1fd91f0f156de7023a4df1c2848cbce0d070d0dfceee5c0ab"
+    },
+    "generate-clickable-prototype-plan": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-clickable-prototype-plan/SKILL.md",
+      "computedHash": "5de2aec15273bff2c1152240e533ef28be3981dd46314048343ff2c42141da98"
+    },
+    "generate-component-copy": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-component-copy/SKILL.md",
+      "computedHash": "62462ee69a07a18eb2d4f26f763c9ac893b9d797bfc2639f35cffa3640ed2ce7"
+    },
+    "generate-component-state-model": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-component-state-model/SKILL.md",
+      "computedHash": "f9d4657a6d17c403d7d2883d878d7e628a9e3cf2ef82f5392719de478dff9b63"
+    },
+    "generate-content-journey-map": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-content-journey-map/SKILL.md",
+      "computedHash": "da52712af681ff168c8923bfe0be828ff35c09dc888d62cc6620139f334e055b"
+    },
+    "generate-content-model-from-blueprint": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-content-model-from-blueprint/SKILL.md",
+      "computedHash": "eb1eb8273e6a4ecff5d825c44e7b701a54beb3256fe6c95781a7790967d5c181"
+    },
+    "generate-conversion-journey": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-conversion-journey/SKILL.md",
+      "computedHash": "2d57bf872d4c0f68680a46f1415377b4052500b8b10cf8f8f77f1c7424e2ee5d"
+    },
+    "generate-copy-from-knowledge": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-copy-from-knowledge/SKILL.md",
+      "computedHash": "32cd36c22f6b96f88504a4cae81fb897b862e030f307622c7372082586f9c1ba"
+    },
+    "generate-cta-copy": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-cta-copy/SKILL.md",
+      "computedHash": "1aa29f567365ceb0bfa8024d9ad779b06f353dec123aea65788192b0827672e5"
+    },
+    "generate-design-system-seed": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-design-system-seed/SKILL.md",
+      "computedHash": "411a2ca46cd704cc2c0da81ec15c7a84d7900dfe0126333c88d03e7a68b997ae"
+    },
+    "generate-footer-foundation": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-footer-foundation/SKILL.md",
+      "computedHash": "1cb27fb8064f519e4dabd95161aa8d0f6a6c01788b7a2c48513bd836bec3f8e8"
+    },
+    "generate-form-microcopy": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-form-microcopy/SKILL.md",
+      "computedHash": "106f7620d40e44a5596d82c159cef11de4464e4b4b5ee0b028c8acb7b2cabc32"
+    },
+    "generate-header-foundation": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-header-foundation/SKILL.md",
+      "computedHash": "d4584bc2602a140049555f826790cc84cfa51d8841838224b21113d4401e4e32"
+    },
+    "generate-interaction-audit-report": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-interaction-audit-report/SKILL.md",
+      "computedHash": "54802c2f7c831a4c609d4ecacc6923d4f83175c213bf33d1897c811c392bac90"
+    },
+    "generate-interaction-flow": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-interaction-flow/SKILL.md",
+      "computedHash": "80a3c979bbd3e5c85d10af0e878585b59f602f86abac08b7a0fa75a73379874c"
+    },
+    "generate-interactive-prototype-config": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-interactive-prototype-config/SKILL.md",
+      "computedHash": "0c885c4ae65a5b627cce63d6586cccaa0fb2046161aa9011add4c9b13fa5ff21"
+    },
+    "generate-meta-description": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-meta-description/SKILL.md",
+      "computedHash": "87f1a1546767130365fe122eb015b80a4c6166cc6c9f1c2924eed609d41ad4c0"
+    },
+    "generate-objection-map": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-objection-map/SKILL.md",
+      "computedHash": "58f0ddd0a81e27059a5ffebb87c8eff48653ee0b88a42a352a796f04732e4d33"
+    },
+    "generate-page-audit-report": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-page-audit-report/SKILL.md",
+      "computedHash": "9271937a7616f5173bc5b9758acd0bbac98b1448c8a48160dabfb9b52ea43cf8"
+    },
+    "generate-page-copy": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-page-copy/SKILL.md",
+      "computedHash": "488eb36708e60d507c0de8e09485711d48a1871df31f5b3f8ea2f64e3bcdc881"
+    },
+    "generate-page-summary": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-page-summary/SKILL.md",
+      "computedHash": "6661928f16faa74b1c89ecbe3bac73d5c226e7cc8e9a4226bbbfed3f03fadf6b"
+    },
+    "generate-page-user-flow": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-page-user-flow/SKILL.md",
+      "computedHash": "53c2648e9c65dd9779a8beded0411250cc15c779e6752b41c7321da7b5f7ac7d"
+    },
+    "generate-prototype-copy": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-prototype-copy/SKILL.md",
+      "computedHash": "13053e486221982c43e94f5aca8f8c662e0c761cac251ac0514d07c88b31f562"
+    },
+    "generate-prototype-flow": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-prototype-flow/SKILL.md",
+      "computedHash": "e9843cbd14e1a0da76573202f9248db00f7fd5b7c197536d8192ddf234ccf860"
+    },
+    "generate-runtime-design-theme": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-runtime-design-theme/SKILL.md",
+      "computedHash": "bd0b76604c3a55552b937ffb0050c4566a9879b0961e789dacd2c526db9ef388"
+    },
+    "generate-section-audit-report": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-section-audit-report/SKILL.md",
+      "computedHash": "950fb91c36b2fed7dc6c34ced5a8921c00e03582f6943eaf18c3498136f2d8a3"
+    },
+    "generate-section-copy": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-section-copy/SKILL.md",
+      "computedHash": "9c85f60ba466654115988a74af9162d41f4111c866c31098278528eeb3e56dd3"
+    },
+    "generate-seo-audit-report": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-seo-audit-report/SKILL.md",
+      "computedHash": "25c41af149a5f5e01455c061513e7d9d8a9e7c1747694aed985242e9a341ddc5"
+    },
+    "generate-site-audit-report": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-site-audit-report/SKILL.md",
+      "computedHash": "26e6b7002e2f7a66a34b9a9378307c6cd3d5893e6fa1b7b8a2cfb649f91b9768"
+    },
+    "generate-style-reference": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-style-reference/SKILL.md",
+      "computedHash": "52d991e50c40d7feac0a9e70c222714e7fdd5d11ea3fdbe6ccf89a3880f45112"
+    },
+    "generate-title-tag": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-title-tag/SKILL.md",
+      "computedHash": "29088a312662df7c231e4f06e050729ef96a0e5bd5769e7d07182d722a788d6d"
+    },
+    "generate-ui-blueprint-from-study": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-ui-blueprint-from-study/SKILL.md",
+      "computedHash": "d948b28e0ddde060d4d74cd1a12013cb4074884cddde5f12934a05ddb21d4d9b"
+    },
+    "generate-user-journey-map": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-user-journey-map/SKILL.md",
+      "computedHash": "e91fa174618e94b454170b65e62e34927a572e09c26b9a11ee544df2029fab93"
+    },
+    "generate-wireframe-config": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/generate-wireframe-config/SKILL.md",
+      "computedHash": "768a31d2932e66b4873a054fe35e83c2bfdf11b80edb079383eaceccbc29058a"
+    },
+    "interaction-patterns": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/interaction-patterns/SKILL.md",
+      "computedHash": "58c9f1f00165d99587fa486962b7a5a409154c10c54ac85d639da633dfb28986"
+    },
+    "layout-specification": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/layout-specification/SKILL.md",
+      "computedHash": "ac3a6857be3b452218772d0e843c2551bf7feafaab6ded118c89ce2967602e44"
+    },
+    "map-style-to-design-system-seed": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/map-style-to-design-system-seed/SKILL.md",
+      "computedHash": "0b012b10c6facfcf77a2daf036b127cf3c2adb931cb772d9891094f8092473a5"
+    },
+    "mockup-to-component-analysis": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/mockup-to-component-analysis/SKILL.md",
+      "computedHash": "1cf31550a99bc98011b59fe8fe2e737dc53f735d6c9eff2542fb8bd1cd5805f5"
+    },
+    "page-wireframe-planner": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/page-wireframe-planner/SKILL.md",
+      "computedHash": "848d89e8340de55126465e5143be572431bb12324d911804615ec9c9033a9a6a"
+    },
+    "react-component-review": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/react-component-review/SKILL.md",
+      "computedHash": "82c2fea12a937dd5c4590bb73f78bf67e3b199d96cacd48e00f835b74506de03"
+    },
+    "recommend-style-reference": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/recommend-style-reference/SKILL.md",
+      "computedHash": "4d67ae03119c1a9b8379428c6a200a6438a04a7138f0ba6cd4e62a4418c36644"
+    },
+    "search-ui-knowledge": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/search-ui-knowledge/SKILL.md",
+      "computedHash": "7c229ba2c83b7c2bb5efeb8116242069f47a790b514df2e94c9ba11c30770b97"
+    },
+    "section-wireframe-planner": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/section-wireframe-planner/SKILL.md",
+      "computedHash": "10d146adb96eb47f576f2c83bf204f95331804f8f166dd73bd02570656f1b943"
+    },
+    "shared-ui-component-planner": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/shared-ui-component-planner/SKILL.md",
+      "computedHash": "28568c3f4d4ff3d58f1eb7b9090342ce681550fedf3f1a9686c2be86f0b7bfae"
+    },
+    "storybook-from-component-spec": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/storybook-from-component-spec/SKILL.md",
+      "computedHash": "ba1c08d077590b39016c7a4fbb2b5dde833dabfd5d42e94e9561ed1d2759258c"
+    },
+    "study-ui-accessibility": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/study-ui-accessibility/SKILL.md",
+      "computedHash": "9cf9911e1f48b1e3859dad8d5e38ede966ccd87ee0b6491e381aeea22a6d0175"
+    },
+    "study-ui-capture": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/study-ui-capture/SKILL.md",
+      "computedHash": "f3d743f7349a3e417a267e1a695d2e2f9d8bf7c7688d262f3973cd98b2c923f7"
+    },
+    "study-ui-information-architecture": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/study-ui-information-architecture/SKILL.md",
+      "computedHash": "9f816bc45fc24bbcfdb84f09aa5a403c5851107bca4e764ad6a5605a1cab79b4"
+    },
+    "study-ui-interaction": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/study-ui-interaction/SKILL.md",
+      "computedHash": "a02270b1ef3b9a8e09b79c55e84caccd33f963d600f5b02b2bb9fed4cc9f0ff5"
+    },
+    "study-ui-motion": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/study-ui-motion/SKILL.md",
+      "computedHash": "058642ef6e3a9e161ed578eece207a5b44d1a44aee3f99b20094c10184217d48"
+    },
+    "study-ui-prototype-behavior": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/study-ui-prototype-behavior/SKILL.md",
+      "computedHash": "eb36f6cbe7b2d74d80ca232b8048a225d33575fa84fd45c0cdfe876f938d4d92"
+    },
+    "study-ui-responsive-behavior": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/study-ui-responsive-behavior/SKILL.md",
+      "computedHash": "3796d8ecf36f48e901b2780c59876b012967c259b103ec9e9908a8840e23beaf"
+    },
+    "study-ui-specification": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/study-ui-specification/SKILL.md",
+      "computedHash": "c94b8b797a00029562454a394b8afb791d7e4ca75833e4716958dee21a0d73aa"
+    },
+    "study-ui-storytelling": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/study-ui-storytelling/SKILL.md",
+      "computedHash": "b2fb56b49858d7c7843bf752be4360d316141fda8e8d837c5a5ddb7a9ab57f10"
+    },
+    "wireframe-schema": {
+      "source": "omiologic/ui-design-intelligence",
+      "sourceType": "github",
+      "skillPath": "plugins/individuals/wireframe-schema/SKILL.md",
+      "computedHash": "68eaaa077519ae46459ebc7ff85d63b70f4d5bd4b1e6ad82835480273bba5cec"
+    }
+  }
+}

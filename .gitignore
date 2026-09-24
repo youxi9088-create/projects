@@ -1,0 +1,13 @@
+.env
+apps/api/data/generated-commission-files/
+node_modules/
+dist/
+apps/*/dist/
+.runtime-logs/
+tmp/
+.workbuddy/
+.deploy-temp-*/
+*.tar.gz
+apps/web/.verify-dist/
+apps/web/verify-dist-tmp/
+apps/web/dist.prebuild.*/

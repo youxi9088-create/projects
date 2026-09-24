@@ -1,0 +1,17 @@
+[Unit]
+Description=Hidden Object Game API
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/opt/hidden-object-web/apps/api
+EnvironmentFile=/etc/hidden-object-web.env
+Environment=NODE_ENV=production
+Environment=PORT=3001
+ExecStart=/usr/bin/node /opt/hidden-object-web/apps/api/dist/server.js
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

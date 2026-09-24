@@ -1,0 +1,422 @@
+[
+  {
+    "id": "generated-fog-harbor-cabin-1yuww4n",
+    "prompt": "雾港的海盗船长舱，找航海线索",
+    "seed": "test-seed",
+    "createdAt": "2026-09-06T12:02:52.047Z",
+    "level": {
+      "version": "1.0",
+      "id": "generated-fog-harbor-cabin-1yuww4n",
+      "title": "雾港船长舱 · 即时委托",
+      "seed": "test-seed",
+      "source": "preset",
+      "scene": {
+        "backgroundUrl": "/content/scenes/fog-harbor-cabin-layered.jpg",
+        "width": 1536,
+        "height": 1024
+      },
+      "mission": {
+        "type": "find",
+        "targetIds": [
+          "telescope",
+          "lantern",
+          "star-chart",
+          "sextant",
+          "pocket-watch",
+          "brass-key",
+          "camera",
+          "sealed-letter"
+        ]
+      },
+      "objects": [
+        {
+          "id": "telescope",
+          "name": "望远镜",
+          "spriteUrl": "/content/objects/cabin-1.png",
+          "thumbnailUrl": "/content/objects/cabin-1.png",
+          "hint": "穿过雨雾的长眼，仍望着未归的船影。",
+          "target": true,
+          "x": 0.602,
+          "y": 0.208,
+          "width": 245,
+          "height": 95,
+          "hitPadding": 8
+        },
+        {
+          "id": "lantern",
+          "name": "航海灯",
+          "spriteUrl": "/content/objects/cabin-2.png",
+          "thumbnailUrl": "/content/objects/cabin-2.png",
+          "hint": "舱窗旁的暖光，替夜航者留下一道门。",
+          "target": true,
+          "x": 0.467,
+          "y": 0.248,
+          "width": 90,
+          "height": 135,
+          "hitPadding": 8
+        },
+        {
+          "id": "star-chart",
+          "name": "星图",
+          "spriteUrl": "/content/objects/cabin-3.png",
+          "thumbnailUrl": "/content/objects/cabin-3.png",
+          "hint": "航线的答案铺在桌心，星辰替它标了记号。",
+          "target": true,
+          "x": 0.5,
+          "y": 0.47,
+          "width": 260,
+          "height": 100,
+          "hitPadding": 8
+        },
+        {
+          "id": "sextant",
+          "name": "六分仪",
+          "spriteUrl": "/content/objects/cabin-4.png",
+          "thumbnailUrl": "/content/objects/cabin-4.png",
+          "hint": "测量天海夹角的黄铜弧线，伏在地图下缘。",
+          "target": true,
+          "x": 0.353,
+          "y": 0.605,
+          "width": 150,
+          "height": 125,
+          "hitPadding": 8
+        },
+        {
+          "id": "pocket-watch",
+          "name": "怀表",
+          "spriteUrl": "/content/objects/cabin-5.png",
+          "thumbnailUrl": "/content/objects/cabin-5.png",
+          "hint": "码头钟声未响，时间先在航图右侧停住。",
+          "target": true,
+          "x": 0.581,
+          "y": 0.576,
+          "width": 52,
+          "height": 52,
+          "hitPadding": 8
+        },
+        {
+          "id": "brass-key",
+          "name": "黄铜钥匙",
+          "spriteUrl": "/content/objects/cabin-6.png",
+          "thumbnailUrl": "/content/objects/cabin-6.png",
+          "hint": "开锁的金属答案，紧挨着那段停摆时刻。",
+          "target": true,
+          "x": 0.623,
+          "y": 0.566,
+          "width": 43,
+          "height": 43,
+          "hitPadding": 8
+        },
+        {
+          "id": "camera",
+          "name": "相机",
+          "spriteUrl": "/content/objects/cabin-7.png",
+          "thumbnailUrl": "/content/objects/cabin-7.png",
+          "hint": "靠近船舷的镜头，保留了港口最后一帧。",
+          "target": true,
+          "x": 0.868,
+          "y": 0.804,
+          "width": 130,
+          "height": 145,
+          "hitPadding": 8
+        },
+        {
+          "id": "sealed-letter",
+          "name": "封蜡信件",
+          "spriteUrl": "/content/objects/cabin-8.png",
+          "thumbnailUrl": "/content/objects/cabin-8.png",
+          "hint": "火漆落在船长桌上，终于把谜底封成一句话。",
+          "target": true,
+          "x": 0.718,
+          "y": 0.89,
+          "width": 185,
+          "height": 88,
+          "hitPadding": 8
+        }
+      ]
+    },
+    "provider": "mock",
+    "fallbackUsed": false,
+    "generationMs": 3
+  },
+  {
+    "id": "generated-fog-harbor-cabin-hgcsmz",
+    "prompt": "生成一个海底世界寻找物件游戏",
+    "seed": "seed-mto3ocoz",
+    "createdAt": "2026-09-05T08:07:41.125Z",
+    "level": {
+      "version": "1.0",
+      "id": "generated-fog-harbor-cabin-hgcsmz",
+      "title": "雾港船长舱 · 即时委托",
+      "seed": "seed-mto3ocoz",
+      "source": "preset",
+      "scene": {
+        "backgroundUrl": "/content/scenes/fog-harbor-cabin-layered.jpg",
+        "width": 1536,
+        "height": 1024
+      },
+      "mission": {
+        "type": "find",
+        "targetIds": [
+          "telescope",
+          "lantern",
+          "star-chart",
+          "sextant",
+          "pocket-watch",
+          "brass-key",
+          "camera",
+          "sealed-letter"
+        ]
+      },
+      "objects": [
+        {
+          "id": "telescope",
+          "name": "望远镜",
+          "spriteUrl": "/content/objects/cabin-1.png",
+          "thumbnailUrl": "/content/objects/cabin-1.png",
+          "hint": "穿过雨雾的长眼，仍望着未归的船影。",
+          "target": true,
+          "x": 0.602,
+          "y": 0.208,
+          "width": 245,
+          "height": 95,
+          "hitPadding": 8
+        },
+        {
+          "id": "lantern",
+          "name": "航海灯",
+          "spriteUrl": "/content/objects/cabin-2.png",
+          "thumbnailUrl": "/content/objects/cabin-2.png",
+          "hint": "舱窗旁的暖光，替夜航者留下一道门。",
+          "target": true,
+          "x": 0.467,
+          "y": 0.248,
+          "width": 90,
+          "height": 135,
+          "hitPadding": 8
+        },
+        {
+          "id": "star-chart",
+          "name": "星图",
+          "spriteUrl": "/content/objects/cabin-3.png",
+          "thumbnailUrl": "/content/objects/cabin-3.png",
+          "hint": "航线的答案铺在桌心，星辰替它标了记号。",
+          "target": true,
+          "x": 0.5,
+          "y": 0.47,
+          "width": 260,
+          "height": 100,
+          "hitPadding": 8
+        },
+        {
+          "id": "sextant",
+          "name": "六分仪",
+          "spriteUrl": "/content/objects/cabin-4.png",
+          "thumbnailUrl": "/content/objects/cabin-4.png",
+          "hint": "测量天海夹角的黄铜弧线，伏在地图下缘。",
+          "target": true,
+          "x": 0.353,
+          "y": 0.605,
+          "width": 150,
+          "height": 125,
+          "hitPadding": 8
+        },
+        {
+          "id": "pocket-watch",
+          "name": "怀表",
+          "spriteUrl": "/content/objects/cabin-5.png",
+          "thumbnailUrl": "/content/objects/cabin-5.png",
+          "hint": "码头钟声未响，时间先在航图右侧停住。",
+          "target": true,
+          "x": 0.581,
+          "y": 0.576,
+          "width": 52,
+          "height": 52,
+          "hitPadding": 8
+        },
+        {
+          "id": "brass-key",
+          "name": "黄铜钥匙",
+          "spriteUrl": "/content/objects/cabin-6.png",
+          "thumbnailUrl": "/content/objects/cabin-6.png",
+          "hint": "开锁的金属答案，紧挨着那段停摆时刻。",
+          "target": true,
+          "x": 0.623,
+          "y": 0.566,
+          "width": 43,
+          "height": 43,
+          "hitPadding": 8
+        },
+        {
+          "id": "camera",
+          "name": "相机",
+          "spriteUrl": "/content/objects/cabin-7.png",
+          "thumbnailUrl": "/content/objects/cabin-7.png",
+          "hint": "靠近船舷的镜头，保留了港口最后一帧。",
+          "target": true,
+          "x": 0.868,
+          "y": 0.804,
+          "width": 130,
+          "height": 145,
+          "hitPadding": 8
+        },
+        {
+          "id": "sealed-letter",
+          "name": "封蜡信件",
+          "spriteUrl": "/content/objects/cabin-8.png",
+          "thumbnailUrl": "/content/objects/cabin-8.png",
+          "hint": "火漆落在船长桌上，终于把谜底封成一句话。",
+          "target": true,
+          "x": 0.718,
+          "y": 0.89,
+          "width": 185,
+          "height": 88,
+          "hitPadding": 8
+        }
+      ]
+    },
+    "provider": "mock",
+    "fallbackUsed": false,
+    "generationMs": 2
+  },
+  {
+    "id": "generated-fog-harbor-cabin-1h5yuny",
+    "prompt": "雾港海盗船长舱，寻找航海线索",
+    "seed": "ui-smoke",
+    "createdAt": "2026-09-04T15:57:40.429Z",
+    "level": {
+      "version": "1.0",
+      "id": "generated-fog-harbor-cabin-1h5yuny",
+      "title": "雾港船长舱 · 即时委托",
+      "seed": "ui-smoke",
+      "source": "preset",
+      "scene": {
+        "backgroundUrl": "/content/scenes/fog-harbor-cabin-layered.jpg",
+        "width": 1536,
+        "height": 1024
+      },
+      "mission": {
+        "type": "find",
+        "targetIds": [
+          "telescope",
+          "lantern",
+          "star-chart",
+          "sextant",
+          "pocket-watch",
+          "brass-key",
+          "camera",
+          "sealed-letter"
+        ]
+      },
+      "objects": [
+        {
+          "id": "telescope",
+          "name": "望远镜",
+          "spriteUrl": "/content/objects/cabin-1.png",
+          "thumbnailUrl": "/content/objects/cabin-1.png",
+          "hint": "穿过雨雾的长眼，仍望着未归的船影。",
+          "target": true,
+          "x": 0.602,
+          "y": 0.208,
+          "width": 245,
+          "height": 95,
+          "hitPadding": 8
+        },
+        {
+          "id": "lantern",
+          "name": "航海灯",
+          "spriteUrl": "/content/objects/cabin-2.png",
+          "thumbnailUrl": "/content/objects/cabin-2.png",
+          "hint": "舱窗旁的暖光，替夜航者留下一道门。",
+          "target": true,
+          "x": 0.467,
+          "y": 0.248,
+          "width": 90,
+          "height": 135,
+          "hitPadding": 8
+        },
+        {
+          "id": "star-chart",
+          "name": "星图",
+          "spriteUrl": "/content/objects/cabin-3.png",
+          "thumbnailUrl": "/content/objects/cabin-3.png",
+          "hint": "航线的答案铺在桌心，星辰替它标了记号。",
+          "target": true,
+          "x": 0.5,
+          "y": 0.47,
+          "width": 260,
+          "height": 100,
+          "hitPadding": 8
+        },
+        {
+          "id": "sextant",
+          "name": "六分仪",
+          "spriteUrl": "/content/objects/cabin-4.png",
+          "thumbnailUrl": "/content/objects/cabin-4.png",
+          "hint": "测量天海夹角的黄铜弧线，伏在地图下缘。",
+          "target": true,
+          "x": 0.353,
+          "y": 0.605,
+          "width": 150,
+          "height": 125,
+          "hitPadding": 8
+        },
+        {
+          "id": "pocket-watch",
+          "name": "怀表",
+          "spriteUrl": "/content/objects/cabin-5.png",
+          "thumbnailUrl": "/content/objects/cabin-5.png",
+          "hint": "码头钟声未响，时间先在航图右侧停住。",
+          "target": true,
+          "x": 0.581,
+          "y": 0.576,
+          "width": 52,
+          "height": 52,
+          "hitPadding": 8
+        },
+        {
+          "id": "brass-key",
+          "name": "黄铜钥匙",
+          "spriteUrl": "/content/objects/cabin-6.png",
+          "thumbnailUrl": "/content/objects/cabin-6.png",
+          "hint": "开锁的金属答案，紧挨着那段停摆时刻。",
+          "target": true,
+          "x": 0.623,
+          "y": 0.566,
+          "width": 43,
+          "height": 43,
+          "hitPadding": 8
+        },
+        {
+          "id": "camera",
+          "name": "相机",
+          "spriteUrl": "/content/objects/cabin-7.png",
+          "thumbnailUrl": "/content/objects/cabin-7.png",
+          "hint": "靠近船舷的镜头，保留了港口最后一帧。",
+          "target": true,
+          "x": 0.868,
+          "y": 0.804,
+          "width": 130,
+          "height": 145,
+          "hitPadding": 8
+        },
+        {
+          "id": "sealed-letter",
+          "name": "封蜡信件",
+          "spriteUrl": "/content/objects/cabin-8.png",
+          "thumbnailUrl": "/content/objects/cabin-8.png",
+          "hint": "火漆落在船长桌上，终于把谜底封成一句话。",
+          "target": true,
+          "x": 0.718,
+          "y": 0.89,
+          "width": 185,
+          "height": 88,
+          "hitPadding": 8
+        }
+      ]
+    },
+    "provider": "mock",
+    "fallbackUsed": false,
+    "generationMs": 3
+  }
+]
