@@ -16,7 +16,8 @@
     "build": "node scripts/build-fn.mjs",
     "deploy": "fn deploy",
     "migrate:trend": "node src/migrate-trend-history.js",
-    "test": "node --test"
+    "test": "node --test \"test/*.test.js\"",
+    "test:e2e": "playwright test test/e2e.dashboard.spec.mjs"
   },
   "engines": {
     "node": ">=22.5"

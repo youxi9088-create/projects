@@ -78,8 +78,9 @@ test('saveSkillAudits 与 loadSkillAudits 往返为 Map', () => {
 
 test('backfillHealthTrendPoints 从旧全快照回填趋势点', () => {
   const conn = db();
+  const withinWindow = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
   conn.prepare('INSERT INTO snapshots (collected_at, payload_json) VALUES (?, ?)').run(
-    '2026-08-10T04:00:00Z',
+    withinWindow,
     JSON.stringify({ overview: { score: 65, warningCount: 1, criticalCount: 0, activeIssues: 2 }, production: { blockedIssues: 1 } })
   );
   const res = backfillHealthTrendPoints({ days: 30 });
